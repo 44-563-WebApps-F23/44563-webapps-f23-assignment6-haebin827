@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Haebin's Website</title>
+</head>
+<body>
+
+    <h2>Author entry - Haebin Noh</h2>
+
+    <form>
+        <label>hidden author name </label>
+        <input type ="password" id="form1" value="Dickens"> <br>
+
+        <label>Guess the author </label>
+        <input type ="text" id="form2" required> <br><br>
+
+        <input type="button" onclick="checkAuthor()" value="Check the guess">
+    </form>
+
+    <p>Good: <p id="goodCount">0</p></p>
+    <p>Oops: <p id="oopsCount">0</p></p>
+
+    <script> 
+    let good = 0;
+    let oops = 0;
+
+    function checkAuthor() {
+        const hiddenAuthor = document.getElementById("form1").value;
+        const guessAuthor = document.getElementById("form2").value;
+
+        if (hiddenAuthor === guessAuthor) {
+            good++;
+            alert("You got it right");
+        }
+        else {
+            oops++;
+            alert("Sorry");
+        }
+        document.getElementById("goodCount").innerHTML = good;
+        document.getElementById("oopsCount").innerHTML = oops;
+    }
+    </script>
+</body>
+</html> 
