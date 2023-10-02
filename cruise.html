@@ -22,6 +22,16 @@
 
 <p id="result">Result</p>
 
+<form>
+    <label for="days">Enter the number of days</label>
+    <input type="text" id="days" value="days">
+
+    <label for="price">Enter price</label>
+    <input type="text" id="price" value="">
+
+    <button type="button" onclick="updateCruise()">Update the cruise</button>
+</form>
+
 <script> 
     var my_cruise;
 
@@ -31,6 +41,16 @@
         my_cruise.shared = document.getElementById("sharesCabin").checked;
         my_cruise.breakfast = document.getElementById("breakfast").checked;
         my_cruise.pool = document.getElementById("poolPass").checked;
+
+        document.getElementById("result").innerHTML = JSON.stringify(my_cruise);
+    }
+
+    function updateCruise() {
+        var days = document.getElementById("days").value;
+        var price = document.getElementById("price").value;
+
+        my_cruise["days"] = days;
+        my_cruise["price"] = price;
 
         document.getElementById("result").innerHTML = JSON.stringify(my_cruise);
     }
