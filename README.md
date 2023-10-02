@@ -2,3 +2,9 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 
+Hosted at [GitHub Pages URL](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-haebin827/)<br>
+Hosted at [author.html](author.html)<br>
+Hosted at [tips.html](tips.html)<br>
+Hosted at [cruise.html](cruise.html)
+
+
