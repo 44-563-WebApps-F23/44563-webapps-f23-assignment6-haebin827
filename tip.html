@@ -27,7 +27,7 @@
     <label for="diffValue">diff</label></br>
   
     <input type="radio" id="multValue" name="operation" value="product">
-    <label for="multValue">mult</label></br>
+    <label for="multValue">mult</label></br></br>
 
     <input type="button" onclick="chooseOp()" value="Get the result">
   </form>
@@ -37,9 +37,9 @@
 <script>
 
 function tips(){
-    var baseAmount = parseFloat(document.getElementById("baseAmount").value);
-    var tipPercent = parseFloat(document.getElementById("tipPercent").value);
-    var toShow = "";
+    let baseAmount = parseFloat(document.getElementById("baseAmount").value);
+    let tipPercent = parseFloat(document.getElementById("tipPercent").value);
+    let toShow = "";
 
     for(var i = 0; i < 5; i++){
         toShow += (tipPercent + (i * 4)) + "% is $" + ((baseAmount * (tipPercent + i * 4)) / 100) + "; ";
@@ -48,9 +48,9 @@ function tips(){
 }
 
 function chooseOp() {
-    var baseAmount = parseFloat(document.getElementById("baseAmount").value);
-    var tipPercent = parseFloat(document.getElementById("tipPercent").value);
-    var resultValue = "";
+    let baseAmount = parseFloat(document.getElementById("baseAmount").value);
+    let tipPercent = parseFloat(document.getElementById("tipPercent").value);
+    let resultValue = "";
 
     if(document.getElementById("sumValue").checked){
         resultValue = "sum of " + baseAmount + " and " + tipPercent + " is " + (baseAmount + tipPercent);
